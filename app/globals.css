@@ -169,8 +169,10 @@ body {
   /* gap */
 }
 
-html {
+body {
   color: var(--dark-gray);
+  background: var(--white);
+  font-family: Interstate, Helvetica, sans-serif;
 }
 
 /* typography */
@@ -344,12 +346,6 @@ html {
 .ani-bg-interactive {
   transition: background 0.5s, border 0.5s, color 0.5s;
 }
-
-/* .ani-interactive-bg:hover,
-.ani-interactive-bg:focus {
-  border: 1px solid #a90007;
-  background-color: #a90007;
-} */
 
 /* icon */
 /* chevron */
