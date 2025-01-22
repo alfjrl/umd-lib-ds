@@ -1,6 +1,4 @@
-import ReadMe from "./README.md?raw";
 import Button from "./Button";
-import { Primary, Controls } from "@storybook/blocks";
 
 export default {
   title: "Components/Button",
@@ -52,7 +50,7 @@ export const PrimaryDisabled = {
 
 export const SecondaryDefault = {
   args: {
-    children: "Primary Button",
+    children: "Secondary Button",
     variant: "secondary",
     status: "default",
   },
