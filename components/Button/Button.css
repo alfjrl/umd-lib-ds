@@ -1,0 +1,36 @@
+/* .button {
+  border: none;
+  background: none;
+  cursor: pointer;
+} */
+
+.button--primary {
+  /* background-color: var(--maryland-red);
+  border: 1px solid var(--maryland-red);
+  color: var(--white); */
+
+  display: inline-block;
+  padding: 0.75rem 2rem;
+}
+
+.button--secondary {
+  display: flex;
+  flex-direction: row;
+}
+
+.button--disabled {
+  cursor: not-allowed;
+}
+
+button.button--disabled,
+button.button--disabled:hover,
+button.button--disabled:focus {
+  color: var(--medium-gray);
+  border: 1px solid var(--light-gray);
+  background-color: var(--light-gray);
+}
+
+a.button--disabled {
+  color: var(--medium-gray);
+  background: none;
+}
