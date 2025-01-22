@@ -21,6 +21,10 @@ import * as ButtonStories from "./Button.stories";
 <Primary />
 <Controls />
 
+### Note
+
+Currently, the disabled status won’t be included in the UMD Libraries Design System.
+
 ### Features
 
 - Multiple variants (primary, secondary, outline)
@@ -33,19 +37,19 @@ import * as ButtonStories from "./Button.stories";
 #### Primary Button
 
 ```twig
-<button class="t-body-small t-interactive-sub button--primary ani-interactive-bg">{{ text }}</button>
+<button class="t-body-small t-interactive-sub button--primary c-content-interactive-primary c-bg-interactive-primary ani-background">{{ text }}</button>
 ```
 
 #### Primary Button - Disabled
 
 ```twig
-<button class="t-body-small t-interactive-sub button--primary ani-interactive-bg button--disabled">{{ text }}</button>
+<button class="t-body-small t-interactive-sub button--primary c-content-interactive-primary c-bg-interactive-primary ani-background button--disabled">{{ text }}</button>
 ```
 
 #### Secondary Button
 
 ```twig
-<a class="t-body-small t-interactive-sub button--secondary ani-underline">
+<a class="t-body-small t-interactive-sub button--secondary c-content-primary c-underline-primary ani-underline">
   <div class="i-chevron"></div>
   {{ text }}
 </a>
@@ -54,7 +58,7 @@ import * as ButtonStories from "./Button.stories";
 #### Secondary Button - Disabled
 
 ```twig
-<a class="t-body-small t-interactive-sub button--secondary ani-underline button--disabled">
+<a class="t-body-small t-interactive-sub button--secondary c-content-primary c-underline-primary ani-underline button--disabled">
   <div class="i-chevron"></div>
   {{ text }}
 </a>

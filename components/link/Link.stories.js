@@ -10,35 +10,29 @@ export default {
   argTypes: {
     variant: {
       control: "select",
-      options: ["action", "title", "body", "navigation", "disabled"],
+      options: ["title", "body", "navigation"],
     },
   },
 };
 
-// Secondary Button Stories
-export const LinkAction = {
+// Title Stories
+export const LinkTitle = {
   args: {
-    children: "Action Link",
-    variant: "action",
+    children: "Title Link",
+    variant: "title",
   },
 };
 
-// export const SecondaryDisabled = {
-//   args: {
-//     children: "Secondary Button Disabled",
-//     variant: "disabled",
-//     disabled: true,
-//   },
-// };
+export const LinkBody = {
+  args: {
+    children: "Body Link",
+    variant: "body",
+  },
+};
 
-// All Variants Demo Story
-export const AllVariants = {
-  render: () => (
-    <div className="flex flex-col gap-4">
-      <div className="flex items-center gap-4">
-        <Link variant="action">Secondary</Link>
-        <Link variant="disabled">Secondary Disabled</Link>
-      </div>
-    </div>
-  ),
+export const LinkNavigation = {
+  args: {
+    children: "Navigation Link",
+    variant: "navigation",
+  },
 };

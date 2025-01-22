@@ -1,14 +1,4 @@
-/* .button {
-  border: none;
-  background: none;
-  cursor: pointer;
-} */
-
 .button--primary {
-  /* background-color: var(--maryland-red);
-  border: 1px solid var(--maryland-red);
-  color: var(--white); */
-
   display: inline-block;
   padding: 0.75rem 2rem;
 }
@@ -22,6 +12,7 @@
   cursor: not-allowed;
 }
 
+/* note: requrie integratation into globals.css */
 button.button--disabled,
 button.button--disabled:hover,
 button.button--disabled:focus {

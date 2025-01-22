@@ -8,17 +8,17 @@ const cn = (...classes) => {
 
 // Link variants configuration
 const LINK_VARIANTS = {
-  action: "link--action ani-underline",
-  title: "link--title",
-  body: "link--body",
-  navigation: "link--navigation",
-  disabled: "link--disabled",
+  // action: "link--action ani-underline",
+  title:
+    "link--title c-content-primary c-underline-secondary ani-underline t-title-medium",
+  body: "link--body c-content-interactive-secondary d-underline t-body-medium",
+  navigation: "link--navigation c-content-interactive-secondary t-interactive",
 };
 
-const BASE_LINK_CLASSES = "t-body-small t-interactive-sub button";
+const BASE_LINK_CLASSES = "";
 
 const Link = forwardRef(
-  ({ children, className, variant = "action", ...props }, ref) => {
+  ({ children, className, variant = "title", ...props }, ref) => {
     const linkClasses = cn(
       BASE_LINK_CLASSES,
       LINK_VARIANTS[variant],
