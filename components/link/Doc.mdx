@@ -23,19 +23,32 @@ import * as LinkStories from "./Link.stories";
 
 ### Note
 
-n/a
+Currently, only 3 types of the links are included in the design system, which are:
+
+- Titlte
+- Body
+- Navigation
 
 ### Features
 
-- Multiple variants (primary, secondary, outline)
-- Different sizes (small, medium, large)
-- Support for icons
-- Full keyboard accessibility
+The differences between the three types of links are mainly stylistic, such as color, text decoration, and animation. The typography is interchangeable within each type; for example, a Title link can be used with any title typography.
 
 ### Twig
 
-#### Primary Button
+#### Title Link
 
 ```twig
-<button class="t-body-small t-interactive-sub button--primary c-content-interactive-primary c-bg-interactive-primary ani-background">{{ text }}</button>
+<a class="link--title c-content-primary c-underline-secondary ani-underline t-title-medium">{{ text }}</a>
+```
+
+#### Body Link
+
+```twig
+<a class="link--body c-content-interactive-secondary d-underline t-body-medium">{{ text }}</a>
+```
+
+#### Navigation Link
+
+```twig
+<a class="link--navigation c-content-interactive-secondary t-interactive">{{ text }}</a>
 ```
