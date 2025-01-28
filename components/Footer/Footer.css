@@ -35,7 +35,7 @@ footer {
 }
 
 .footer--columns-main ul {
-  border-left: solid #454545;
+  border-left: 1px solid #454545;
 }
 
 .footer--columns-secondary-item {
@@ -118,7 +118,7 @@ ul.social-media-list li {
   .footer--sub ul li:not(:first-child),
   .footer--sub > div > div {
     padding-left: 1rem;
-    border-left: solid #454545;
+    border-left: 1px solid #454545;
   }
 }
 
