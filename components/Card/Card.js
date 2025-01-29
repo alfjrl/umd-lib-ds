@@ -47,7 +47,10 @@ const Card = forwardRef(
             </div>
 
             <h3 className="card--headline t-title-medium c-underline-secondary ani-underline s-stack-default">
-              <Link variant="title">{title}</Link>
+              {/* <Link variant="title"></Link> */}
+              <a class="link--title c-content-primary c-underline-secondary ani-underline t-title-medium">
+                {title}
+              </a>
             </h3>
           </div>
           <div className="card--details">
@@ -59,9 +62,13 @@ const Card = forwardRef(
               <time dateTime="2025-01-28">{date}</time>
             </div>
           </div>
-          <Button status="default" variant="secondary">
+          <a class="t-body-small t-interactive-sub button--secondary c-content-primary c-underline-primary ani-underline">
+            <div class="i-chevron"></div>
             {link}
-          </Button>
+          </a>
+          {/* <Button status="default" variant="secondary">
+            {link}
+          </Button> */}
         </div>
       </div>
     );
