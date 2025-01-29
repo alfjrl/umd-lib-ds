@@ -152,6 +152,19 @@ body {
   font-style: normal;
 }
 
+/* base */
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  border-width: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 :root {
   /* color */
   --maryland-red: #e21833;
@@ -286,7 +299,7 @@ body {
 }
 
 .c-content-tertiary {
-  color: var(--maryland-red);
+  color: var(--medium-gray);
 }
 
 .c-content-dark-primary {
@@ -324,6 +337,14 @@ body {
 
 .c-underline-dark-primary {
   background-image: linear-gradient(var(--white), var(--white));
+}
+
+.c-bg-primary {
+  background-color: var(--white);
+}
+
+.c-bg-secondary {
+  background-color: var(--lighest-gray);
 }
 
 .c-bg-dark-primary {
@@ -423,15 +444,25 @@ body {
 /* box */
 /* Mobile */
 /* page width component */
+.s-box-page-default-v {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .s-box-page-default-h {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
+.s-box-page-small-v {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 /* box -> within element */
 .s-box-default-v {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .s-box-default-h {
@@ -442,6 +473,11 @@ body {
 .s-box-small-v {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.s-box-small-h {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* stack/inline -> within element */
@@ -472,13 +508,18 @@ body {
 /* Tablet */
 @media (min-width: 768px) {
   .s-box-default-v {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .s-box-default-h {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .s-box-page-default-v {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .s-box-page-default-h {
@@ -489,9 +530,29 @@ body {
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .s-box-default-v {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   .s-box-default-h {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .s-box-small-v {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .s-box-small-h {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .s-box-page-default-v {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .s-box-page-default-h {

@@ -13,7 +13,7 @@ const Footer = forwardRef(({ children, className, ...props }, ref) => {
 
   return (
     <footer role="contentinfo" ref={ref} className={footerClasses} {...props}>
-      <div className="footer--content s-box-page-default-h s-box-default-v s-center">
+      <div className="footer--content s-box-page-default-h s-box-page-default-v s-center">
         <div className="footer--header s-stack-large">
           <div className="footer--logo">
             <Image
@@ -358,7 +358,7 @@ const Footer = forwardRef(({ children, className, ...props }, ref) => {
         </div>
       </div>
       <div className="footer--sub c-bg-dark-secondary">
-        <div className="footer--sub-content t-label s-box-small-v s-box-page-default-h s-center">
+        <div className="footer--sub-content t-label s-box-page-small-v s-box-page-default-h s-center">
           <ul>
             <li>
               <a href="/" className="ani-underline c-underline-dark-primary">

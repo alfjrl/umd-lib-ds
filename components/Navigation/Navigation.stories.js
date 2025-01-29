@@ -1,8 +1,8 @@
-import Footer from "./Footer";
+import Navigation from "./Navigation";
 
 export default {
-  title: "Components/Footer",
-  component: Footer,
+  title: "Components/Navigation",
+  component: Navigation,
   parameters: {
     layout: "fullscreen",
     viewport: {
@@ -42,9 +42,15 @@ export default {
   argTypes: {},
 };
 
-// Footer Stories
-export const FooterDefault = {
+// Navigation Stories
+export const NavigationDefault = {
   // args: {
-  //   children: "Footer",
+  //   children: "Navigation",
+  // },
+};
+
+export const NavigationSearch = {
+  // args: {
+  //   children: "Navigation",
   // },
 };

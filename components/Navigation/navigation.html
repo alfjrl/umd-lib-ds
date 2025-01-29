@@ -1,0 +1,1473 @@
+<umd-element-navigation-header role="navigation">
+  <a href="/" slot="logo">
+    <img
+      src="/themes/custom/umd_designsystem/logo.png"
+      alt="Home"
+      style="max-width: 450px; min-width: 300px; max-height: none"
+    />
+  </a>
+
+  <div slot="main-navigation" id="menu-main-navigation">
+    <umd-element-nav-item>
+      <a href="/about" slot="primary-link"><span>About</span></a>
+      <div slot="dropdown-links"></div>
+    </umd-element-nav-item>
+
+    <umd-element-nav-item>
+      <a href="/people" slot="primary-link"><span>People</span></a>
+    </umd-element-nav-item>
+
+    <umd-element-nav-item>
+      <a href="/education" slot="primary-link"><span>Education</span></a>
+      <div slot="dropdown-links"></div>
+    </umd-element-nav-item>
+
+    <umd-element-nav-item>
+      <a href="/research" slot="primary-link"><span>Research</span></a>
+      <div slot="dropdown-links"></div>
+    </umd-element-nav-item>
+
+    <umd-element-nav-item>
+      <a href="/news-events" slot="primary-link"
+        ><span>News &amp; Events</span></a
+      >
+      <div slot="dropdown-links"></div>
+    </umd-element-nav-item>
+  </div>
+
+  <div slot="primary-slide-links">
+    <a href="/about"><span>About</span></a>
+
+    <a href="/people"><span>People</span></a>
+
+    <a href="/education"><span>Education</span></a>
+
+    <a href="/research"><span>Research</span></a>
+
+    <a href="/news-events"><span>News &amp; Events</span></a>
+  </div>
+</umd-element-navigation-header>
+
+<header class="site-header site-header-light">
+  <div class="site-header__bar max-bound">
+    <a class="site-header__logo" href="/">
+      <img
+        src="/sites/default/files/2021-06/logo.svg"
+        alt="University Libraries logo"
+      />
+    </a>
+    <div class="navigations">
+      <div class="search-utility">
+        <!-- Header Search Region -->
+        <div id="header-search">
+          <div class="header-search-block"></div>
+          <div class="header-search-bt-mobile">
+            <div class="logo-mobile">
+              <a class="site-header__mlogo" href="/">
+                <img
+                  src="/sites/default/files/2021-06/logo.svg"
+                  alt="University Libraries logo"
+                />
+              </a>
+            </div>
+            <div class="search-mobile">
+              <button
+                id="site-header-nav-toggle"
+                class="site-header__nav-toggle"
+                aria-label="Main Menu"
+                aria-controls="site-header-nav"
+                aria-expanded="false"
+              >
+                <span aria-hidden="true" class="site-header__nav-icon">
+                  <span role="presentation"></span>
+                  <span role="presentation"></span>
+                  <span role="presentation"></span>
+                  <span role="presentation"></span>
+                </span>
+                <span class="sr-only">Main Menu</span>
+              </button>
+            </div>
+          </div>
+          <div id="showSearch"></div>
+        </div>
+        <!-- End Header Search Region -->
+        <!-- Utility Nav Region -->
+        <nav
+          aria-labelledby="block-utilitynavigation-menu"
+          id="block-utilitynavigation"
+        >
+          <p class="visually-hidden" id="block-utilitynavigation-menu">
+            Menu for accounts, hours, help, and system status
+          </p>
+
+          <ul class="utility-menus">
+            <li>
+              <button
+                id="u-hours-btn"
+                onclick="hoursToggle()"
+                class="btn-noborder"
+              >
+                <span class="fas fa-clock"></span>
+                <br />
+                <span class="utility-label utility-nav-locations"
+                  >Locations &amp; Hours</span
+                >
+              </button>
+            </li>
+            <li>
+              <button
+                id="u-system-btn"
+                onclick="systemToggle()"
+                class="btn-noborder"
+              >
+                <span class="fas fa-exclamation-triangle"></span>
+                <br />
+                <span class="utility-label utility-nav-systems-status"
+                  >System Status <span class="status">&nbsp;</span></span
+                >
+              </button>
+            </li>
+            <li>
+              <button
+                id="u-help-btn"
+                onclick="helpToggle()"
+                class="btn-noborder"
+              >
+                <span class="fas fa-question-circle"></span>
+                <br />
+                <span class="utility-label utility-nav-help">Get Help</span>
+              </button>
+            </li>
+            <li>
+              <button
+                id="u-info-btn"
+                onclick="infoToggle()"
+                class="btn-noborder"
+              >
+                <span class="fas fa-info-circle"></span>
+                <br />
+                <span class="utility-label utility-nav-info">Info For</span>
+              </button>
+            </li>
+            <li>
+              <button
+                id="u-accounts-btn"
+                onclick="accountsToggle()"
+                class="btn-noborder"
+              >
+                <span class="fas fa-user"></span>
+                <br />
+                <span class="utility-label utility-nav-accounts"
+                  >Accounts<br
+                /></span>
+              </button>
+            </li>
+          </ul>
+
+          <div id="showHelp" tabindex="0">
+            <div class="info-grid">
+              <div class="info-heading">Ask Us</div>
+              <div>
+                <form
+                  method="get"
+                  class="navbar-form navbar-left"
+                  role="search"
+                  name="s-la-searchform"
+                  action="https://umd.libanswers.com/search"
+                  aria-label="Frequently Asked Questions form"
+                >
+                  <input
+                    type="text"
+                    id="search-faq"
+                    class="form-control"
+                    name="q"
+                    required=""
+                    placeholder="How to reserve a room?"
+                    size="25"
+                    value=""
+                    autocomplete="on"
+                    aria-label="Frequently Asked Questions input"
+                  />
+                  <button type="submit" class="btn-faq">Search FAQ</button>
+                </form>
+                <div>
+                  <a
+                    href="https://lib.guides.umd.edu/SubjectSpecialists/BySubject"
+                    >Contact a Subject Specialist</a
+                  >
+                  | <a href="/about/contact">General Contacts</a> |
+                  <a href="/find/borrow/billing/inquiry">Billing Inquiry</a>
+                </div>
+              </div>
+              <div>
+                <!-- start of chat chat with us! button -->
+                <button
+                  class="cw-button"
+                  id="cw-button"
+                  href="#"
+                  onclick="openChatWindow()"
+                  type="button"
+                  aria-label="Open chat with us chat widget"
+                >
+                  <div class="cw-button-content" aria-hidden="true">
+                    <div class="cw-icon" id="cw-icon"></div>
+                    <div class="cw-text"><p>Chat With Us!</p></div>
+                  </div>
+                </button>
+                <!-- end of chat chat with us! button -->
+                <div class="utility-border">
+                  <span aria-hidden="true" class="fas fa-book"></span>
+                  <span class="sr-only">Book icon</span
+                  ><span
+                    ><a href="https://lib.guides.umd.edu/"
+                      >RESEARCH GUIDES</a
+                    ></span
+                  >
+                </div>
+                <div class="utility-border">
+                  <span aria-hidden="true" class="fas fa-laptop-code"></span>
+                  <span class="sr-only">Book icon</span
+                  ><span
+                    ><a href="/about/contact/tech">REPORT A PROBLEM</a></span
+                  >
+                </div>
+                <div class="utility-border">
+                  <span aria-hidden="true" class="fas fa-comment"></span>
+                  <span class="sr-only">Book icon</span
+                  ><span
+                    ><a
+                      href="https://libumd.wufoo.com/forms/library-suggestions"
+                      >SHARE FEEDBACK</a
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+            <button onclick="exitHelp()" class="close-btn">
+              <span aria-hidden="true" class="fas fa-times"></span>
+              <span class="sr-only">Exit Help</span>
+            </button>
+          </div>
+
+          <div id="showInfo" tabindex="0">
+            <div class="info-grid">
+              <div class="info-heading">Information For</div>
+
+              <div class="utility-border">
+                <span class="utility-location"
+                  ><a
+                    href="/information/undergrads"
+                    data-drupal-link-system-path="node/710"
+                    >Undergraduate Students</a
+                  ></span
+                >
+              </div>
+              <div class="utility-border">
+                <span class="utility-location"
+                  ><a
+                    href="/information/graduate-students"
+                    data-drupal-link-system-path="node/711"
+                    >Graduate Students</a
+                  ></span
+                >
+              </div>
+              <div class="utility-border">
+                <span class="utility-location"
+                  ><a
+                    href="/information/faculty"
+                    data-drupal-link-system-path="node/712"
+                    >Faculty and Instructors</a
+                  ></span
+                >
+              </div>
+              <div class="utility-border">
+                <span class="utility-location"
+                  ><a
+                    href="/information/accessibility"
+                    data-drupal-link-system-path="node/806"
+                    >People with Disabilities</a
+                  ></span
+                >
+              </div>
+              <div class="utility-border">
+                <span class="utility-location"
+                  ><a
+                    href="/information/visitors"
+                    data-drupal-link-system-path="node/993"
+                    >Visitors</a
+                  ></span
+                >
+              </div>
+            </div>
+
+            <button onclick="exitInfo()" class="close-btn">
+              <span aria-hidden="true" class="fas fa-times"></span>
+              <span class="sr-only">Exit Info</span>
+            </button>
+          </div>
+
+          <div id="showHours" tabindex="0">
+            <div class="hours-grid">
+              <!-- all hours -->
+              <div class="hours-heading">Tuesday, January 28</div>
+              <div class="hours-heading-note">
+                Library Hours are subject to change.
+              </div>
+              <!-- locations -->
+              <div class="utility-border hours1">
+                <span class="utility-location">
+                  <a href="/visit/libraries/mckeldin">McKeldin</a>
+                </span>
+                (MAIN)
+                <span class="utility-hours">
+                  <!-- location dates -->
+                  <!-- location dates internal -->
+                  <!-- -- location hours or status ---->
+                  <!-- hours info -->
+                  <!-- Date stuff -->
+                  8:00AM - 11:00PM
+                  <!-- End date stuff -->
+                  <!-- end hours info -->
+                  <!-- end location dates internal -->
+                  <!-- end location dates -->
+                </span>
+              </div>
+              <div class="utility-border hours2">
+                <span class="utility-location">
+                  <a href="/visit/libraries/architecture">Architecture</a>
+                </span>
+                <span class="utility-hours">
+                  <!-- location dates -->
+                  <!-- location dates internal -->
+                  <!-- -- location hours or status ---->
+                  <!-- hours info -->
+                  <!-- Date stuff -->
+                  11:00AM - 4:00PM
+                  <!-- End date stuff -->
+                  <!-- end hours info -->
+                  <!-- end location dates internal -->
+                  <!-- end location dates -->
+                </span>
+              </div>
+              <div class="utility-border hours3">
+                <span class="utility-location">
+                  <a href="/visit/libraries/art">Art</a>
+                </span>
+                <span class="utility-hours">
+                  <!-- location dates -->
+                  <!-- location dates internal -->
+                  <!-- -- location hours or status ---->
+                  <!-- hours info -->
+                  <!-- Date stuff -->
+                  9:00AM - 6:00PM
+                  <!-- End date stuff -->
+                  <!-- end hours info -->
+                  <!-- end location dates internal -->
+                  <!-- end location dates -->
+                </span>
+              </div>
+              <div class="utility-border hours4">
+                <span class="utility-location">
+                  <a href="/visit/libraries/hornbake">Hornbake</a>
+                </span>
+                <span class="utility-hours">
+                  <!-- location dates -->
+                  <!-- location dates internal -->
+                  <!-- -- location hours or status ---->
+                  <!-- hours info -->
+                  <!-- Date stuff -->
+                  7:00AM - 10:00PM
+                  <!-- End date stuff -->
+                  <!-- end hours info -->
+                  <!-- end location dates internal -->
+                  <!-- end location dates -->
+                </span>
+              </div>
+              <div class="utility-border hours5">
+                <span class="utility-location">
+                  <a href="/visit/libraries/mspal"
+                    >Michelle Smith Performing Arts</a
+                  >
+                </span>
+                <span class="utility-hours">
+                  <!-- location dates -->
+                  <!-- location dates internal -->
+                  <!-- -- location hours or status ---->
+                  <!-- hours info -->
+                  <!-- Date stuff -->
+                  9:00AM - 10:00PM
+                  <!-- End date stuff -->
+                  <!-- end hours info -->
+                  <!-- end location dates internal -->
+                  <!-- end location dates -->
+                </span>
+              </div>
+              <div class="utility-border hours6">
+                <span class="utility-location">
+                  <a href="/collections/special"
+                    >Special Collections in Hornbake</a
+                  >
+                </span>
+                <span class="utility-hours">
+                  <!-- location dates -->
+                  <!-- location dates internal -->
+                  <!-- -- location hours or status ---->
+                  10am – 4pm,
+                  <a href="https://www.lib.umd.edu/visit/special/appointment"
+                    >Appointment Required</a
+                  >
+                  <!-- end location dates internal -->
+                  <!-- end location dates -->
+                </span>
+              </div>
+              <div class="utility-border hours7">
+                <span class="utility-location">
+                  <a href="/visit/libraries/stem">STEM</a>
+                </span>
+                <span class="utility-hours">
+                  <!-- location dates -->
+                  <!-- location dates internal -->
+                  <!-- -- location hours or status ---->
+                  <!-- hours info -->
+                  <!-- Date stuff -->
+                  8:00AM - 10:00PM
+                  <!-- End date stuff -->
+                  <!-- end hours info -->
+                  <!-- end location dates internal -->
+                  <!-- end location dates -->
+                </span>
+              </div>
+              <div class="utility-border hours8">
+                <span class="utility-location">Shady Grove</span>
+                <span class="utility-hours"
+                  ><a href="https://shadygrove.umd.edu/library"
+                    >Show Hours</a
+                  ></span
+                >
+              </div>
+              <div class="utility-border hours9">
+                <span class="utility-location">All libraries</span>
+                <span class="utility-hours"
+                  ><a href="https://umd.libcal.com/hours"
+                    >All libraries all days</a
+                  ></span
+                >
+              </div>
+              <!-- end locations -->
+              <!-- end all hours -->
+            </div>
+            <button onclick="exitHours()" class="close-btn">
+              <span aria-hidden="true" class="fas fa-times"></span>
+              <span class="sr-only">Exit Hours</span>
+            </button>
+          </div>
+
+          <div id="showSystem" tabindex="0" data-once="systemStatusBehavior">
+            <div class="systems-status-block">
+              <div
+                class="systems-status-loading"
+                id="systems-status-spinner"
+                style="display: none"
+              >
+                Loading systems data...<span
+                  class="fas fa-spinner fa-spin"
+                ></span>
+              </div>
+              <div
+                class="system-grid"
+                id="systems-status-content"
+                style="display: block"
+              >
+                <div class="system-heading">
+                  <span class="systems-status-date"
+                    >January 28, 2025 at 9:53 AM</span
+                  >
+                </div>
+                <div>
+                  <p>
+                    <a href="/about/systems"
+                      >View All Status of Current Library Services</a
+                    >
+                  </p>
+                </div>
+                <div class="system-item system-display" id="system-no-issues">
+                  <div>
+                    <!-- if no issues found, green checkmark -->
+                    <span
+                      aria-hidden="true"
+                      class="fas fa-check-circle color-success font-4x"
+                    ></span>
+                    <span class="sr-only">green checkmark icon</span>
+                  </div>
+                  <div class="utility-operational">
+                    All Systems are Operational
+                  </div>
+                </div>
+                <div
+                  class="system-item system-hide"
+                  id="system-issues"
+                  style="display: none"
+                >
+                  <div>
+                    <!-- if there's any issue, display warning -->
+                    <span
+                      aria-hidden="true"
+                      class="fas fa-exclamation-triangle color-danger font-4x"
+                    ></span>
+                    <span class="sr-only">Warning icon</span>
+                  </div>
+                  <div>
+                    <div class="utility-location">Issue(s)</div>
+                    <ol class="systems-status-maintenance">
+                      <span class="status"><ol></ol></span>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+              <button onclick="exitSystem()" class="close-btn">
+                <span aria-hidden="true" class="fas fa-times"></span>
+                <span class="sr-only">Exit System Status</span>
+              </button>
+            </div>
+          </div>
+          <div id="showAccounts" tabindex="0">
+            <div class="accounts-grid">
+              <div class="accounts-heading">Accounts</div>
+
+              <div class="utility-border">
+                <span class="utility-location"
+                  ><a
+                    href="https://usmai-umcp.primo.exlibrisgroup.com/discovery/account?vid=01USMAI_UMCP%3AUMCP&amp;section=overview&amp;lang=en"
+                    title="View/renew books, media, and equipment"
+                    >My Account</a
+                  >
+                  <a
+                    href="/find/borrow/books/account-help"
+                    title="accounts help information"
+                    class="accounts-question"
+                    >(?)</a
+                  >
+                </span>
+                <span class="utility-hours"
+                  >View/renew books, media, and equipment</span
+                >
+              </div>
+              <div class="utility-border">
+                <span class="utility-location"
+                  ><a
+                    href="https://docdel.umd.edu/illiad/"
+                    title="Interlibrary loan requests and PDFs"
+                    >ILL Services Account</a
+                  >
+                </span>
+                <span class="utility-hours"
+                  >Interlibrary loan requests and PDFs</span
+                >
+              </div>
+              <div class="utility-border">
+                <span class="utility-location"
+                  ><a
+                    href="https://aeon.lib.umd.edu/"
+                    title="Archives and special collection requests"
+                    >Special Collections Account</a
+                  >
+                </span>
+                <span class="utility-hours"
+                  >Archives and special collection requests</span
+                >
+              </div>
+            </div>
+            <button onclick="exitAccounts()" class="close-btn">
+              <span aria-hidden="true" class="fas fa-times"></span>
+              <span class="sr-only">Exit Accounts</span>
+            </button>
+          </div>
+        </nav>
+        <!-- End Utility Nav Region -->
+      </div>
+      <nav
+        class="site-header__nav"
+        id="site-header-nav"
+        aria-labelledby="site-header-nav-toggle"
+        aria-hidden="true"
+      >
+        <ul>
+          <li>
+            <a href="/find" data-drupal-link-system-path="node/202"
+              >Find, Borrow, Request</a
+            >
+            <button
+              class="site-header__nav-dropdown-toggle"
+              id="site-header-nav-dropdown-toggle-0"
+              aria-haspopup="true"
+              aria-label="View child menu items for Find, Borrow, Request"
+              aria-expanded="false"
+            ></button>
+            <ul
+              aria-labelledby="site-header-nav-dropdown-toggle-0"
+              aria-hidden="true"
+            >
+              <li>
+                <a
+                  href="/find/materials"
+                  data-drupal-link-system-path="node/20"
+                  tabindex="-1"
+                  >Find Materials</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/find/online"
+                  data-drupal-link-system-path="node/676"
+                  tabindex="-1"
+                  >Access Online Resources</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/find/borrow"
+                  data-drupal-link-system-path="node/677"
+                  tabindex="-1"
+                  >Borrow and Return</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/find/request"
+                  data-drupal-link-system-path="node/689"
+                  tabindex="-1"
+                  >Request Items for Pick Up or Delivery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/find/request-digital"
+                  data-drupal-link-system-path="node/775"
+                  tabindex="-1"
+                  >Request Digital Copies or Duplication</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/find/request-special-collections"
+                  data-drupal-link-system-path="node/42"
+                  tabindex="-1"
+                  >Request Onsite Access to Special Collections</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/find/purchase"
+                  data-drupal-link-system-path="node/753"
+                  tabindex="-1"
+                  >Suggest a Title for Purchase</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/find/reserves"
+                  data-drupal-link-system-path="node/691"
+                  tabindex="-1"
+                  >Course Reserves</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/find/ill"
+                  data-drupal-link-system-path="node/1037"
+                  tabindex="-1"
+                  >Interlibrary Loan</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/visit" data-drupal-link-system-path="node/203"
+              >Visit and Study</a
+            >
+            <button
+              class="site-header__nav-dropdown-toggle"
+              id="site-header-nav-dropdown-toggle-1"
+              aria-haspopup="true"
+              aria-label="View child menu items for Visit and Study"
+              aria-expanded="false"
+            ></button>
+            <ul
+              aria-labelledby="site-header-nav-dropdown-toggle-1"
+              aria-hidden="true"
+            >
+              <li>
+                <a
+                  href="/visit/libraries"
+                  data-drupal-link-system-path="node/214"
+                  tabindex="-1"
+                  >Our Libraries</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/visit/space"
+                  data-drupal-link-system-path="visit/space"
+                  tabindex="-1"
+                  >Find a Space</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/visit/tech"
+                  data-drupal-link-system-path="node/38"
+                  tabindex="-1"
+                  >Technology</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/visit/special"
+                  data-drupal-link-system-path="node/802"
+                  tabindex="-1"
+                  >Visit Special Collections</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/research" data-drupal-link-system-path="node/204"
+              >Research and Learning</a
+            >
+            <button
+              class="site-header__nav-dropdown-toggle"
+              id="site-header-nav-dropdown-toggle-2"
+              aria-haspopup="true"
+              aria-label="View child menu items for Research and Learning"
+              aria-expanded="false"
+            ></button>
+            <ul
+              aria-labelledby="site-header-nav-dropdown-toggle-2"
+              aria-hidden="true"
+            >
+              <li>
+                <a
+                  href="/research/subject-specialist"
+                  data-drupal-link-system-path="node/851"
+                  tabindex="-1"
+                  >Meet Your Subject Specialist</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/research/services"
+                  data-drupal-link-system-path="node/849"
+                  tabindex="-1"
+                  >Research Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/research/events"
+                  data-drupal-link-system-path="node/766"
+                  tabindex="-1"
+                  >Events &amp; Workshops</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/research/instruction"
+                  data-drupal-link-system-path="node/854"
+                  tabindex="-1"
+                  >Teaching and Instruction</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/research/oss"
+                  data-drupal-link-system-path="node/641"
+                  tabindex="-1"
+                  >Open Scholarship Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/research/data"
+                  data-drupal-link-system-path="node/645"
+                  tabindex="-1"
+                  >Data Services</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/collections" data-drupal-link-system-path="node/206"
+              >Collections</a
+            >
+            <button
+              class="site-header__nav-dropdown-toggle"
+              id="site-header-nav-dropdown-toggle-3"
+              aria-haspopup="true"
+              aria-label="View child menu items for Collections"
+              aria-expanded="false"
+            ></button>
+            <ul
+              aria-labelledby="site-header-nav-dropdown-toggle-3"
+              aria-hidden="true"
+            >
+              <li>
+                <a
+                  href="/collections/overview"
+                  data-drupal-link-system-path="node/714"
+                  tabindex="-1"
+                  >Collections Overview</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/collections/digital"
+                  data-drupal-link-system-path="node/670"
+                  tabindex="-1"
+                  >Digital Collections and Repositories</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/collections/gov-info"
+                  data-drupal-link-system-path="node/667"
+                  tabindex="-1"
+                  >Government Information</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/collections/special"
+                  data-drupal-link-system-path="node/669"
+                  tabindex="-1"
+                  >Special Collections</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/collections/university-archives"
+                  data-drupal-link-system-path="node/55"
+                  tabindex="-1"
+                  >University Archives</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/about" data-drupal-link-system-path="node/205">About</a>
+            <button
+              class="site-header__nav-dropdown-toggle"
+              id="site-header-nav-dropdown-toggle-4"
+              aria-haspopup="true"
+              aria-label="View child menu items for About"
+              aria-expanded="false"
+            ></button>
+            <ul
+              aria-labelledby="site-header-nav-dropdown-toggle-4"
+              aria-hidden="true"
+            >
+              <li>
+                <a
+                  href="/about/overview"
+                  data-drupal-link-system-path="node/842"
+                  tabindex="-1"
+                  >Overview</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about/contact"
+                  data-drupal-link-system-path="node/812"
+                  tabindex="-1"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about/org"
+                  data-drupal-link-system-path="node/659"
+                  tabindex="-1"
+                  >Our Organization</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about/strategy"
+                  data-drupal-link-system-path="node/105"
+                  tabindex="-1"
+                  >Strategic Goals and Initiatives</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about/collaborations"
+                  data-drupal-link-system-path="node/104"
+                  tabindex="-1"
+                  >Collaborations and Innovations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about/idea"
+                  data-drupal-link-system-path="node/103"
+                  tabindex="-1"
+                  >Inclusion, Diversity, Equity, and Accessibility</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about/careers"
+                  data-drupal-link-system-path="node/716"
+                  tabindex="-1"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about/awards"
+                  data-drupal-link-system-path="node/760"
+                  tabindex="-1"
+                  >Awards</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about/support"
+                  data-drupal-link-system-path="node/62"
+                  tabindex="-1"
+                  >Support the Libraries</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about/policies"
+                  data-drupal-link-system-path="node/658"
+                  tabindex="-1"
+                  >Policies and Safety</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about/news"
+                  data-drupal-link-system-path="about/news"
+                  tabindex="-1"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about/events"
+                  data-drupal-link-system-path="node/273"
+                  tabindex="-1"
+                  >Events and Workshops</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="utility-nav-mobile">
+          <li>
+            <a><span class="fas fa-clock"></span> Locations &amp; Hours</a>
+            <button
+              class="site-header__nav-dropdown-toggle"
+              id="site-header-nav-dropdown-toggle-5"
+              aria-haspopup="true"
+              aria-label="View child menu items for  Locations &amp; Hours"
+              aria-expanded="false"
+            ></button>
+            <ul
+              aria-labelledby="site-header-nav-dropdown-toggle-5"
+              aria-hidden="true"
+            >
+              <li>
+                <!-- mobile hours -->
+                <div class="hours-grid">
+                  <!-- all hours -->
+                  <div class="hours-heading">Tuesday, January 28</div>
+                  <div class="hours-heading-note">
+                    Library Hours are subject to change.
+                  </div>
+                  <!-- locations -->
+                  <div class="utility-border hours1">
+                    <span class="utility-location">
+                      <a href="/visit/libraries/mckeldin" tabindex="-1"
+                        >McKeldin</a
+                      >
+                    </span>
+                    (MAIN)
+                    <span class="utility-hours">
+                      <!-- location dates -->
+                      <!-- location dates internal -->
+                      <!-- -- location hours or status ---->
+                      <!-- hours info -->
+                      <!-- Date stuff -->
+                      8:00AM - 11:00PM
+                      <!-- End date stuff -->
+                      <!-- end hours info -->
+                      <!-- end location dates internal -->
+                      <!-- end location dates -->
+                    </span>
+                  </div>
+                  <div class="utility-border hours2">
+                    <span class="utility-location">
+                      <a href="/visit/libraries/architecture" tabindex="-1"
+                        >Architecture</a
+                      >
+                    </span>
+                    <span class="utility-hours">
+                      <!-- location dates -->
+                      <!-- location dates internal -->
+                      <!-- -- location hours or status ---->
+                      <!-- hours info -->
+                      <!-- Date stuff -->
+                      11:00AM - 4:00PM
+                      <!-- End date stuff -->
+                      <!-- end hours info -->
+                      <!-- end location dates internal -->
+                      <!-- end location dates -->
+                    </span>
+                  </div>
+                  <div class="utility-border hours3">
+                    <span class="utility-location">
+                      <a href="/visit/libraries/art" tabindex="-1">Art</a>
+                    </span>
+                    <span class="utility-hours">
+                      <!-- location dates -->
+                      <!-- location dates internal -->
+                      <!-- -- location hours or status ---->
+                      <!-- hours info -->
+                      <!-- Date stuff -->
+                      9:00AM - 6:00PM
+                      <!-- End date stuff -->
+                      <!-- end hours info -->
+                      <!-- end location dates internal -->
+                      <!-- end location dates -->
+                    </span>
+                  </div>
+                  <div class="utility-border hours4">
+                    <span class="utility-location">
+                      <a href="/visit/libraries/hornbake" tabindex="-1"
+                        >Hornbake</a
+                      >
+                    </span>
+                    <span class="utility-hours">
+                      <!-- location dates -->
+                      <!-- location dates internal -->
+                      <!-- -- location hours or status ---->
+                      <!-- hours info -->
+                      <!-- Date stuff -->
+                      7:00AM - 10:00PM
+                      <!-- End date stuff -->
+                      <!-- end hours info -->
+                      <!-- end location dates internal -->
+                      <!-- end location dates -->
+                    </span>
+                  </div>
+                  <div class="utility-border hours5">
+                    <span class="utility-location">
+                      <a href="/visit/libraries/mspal" tabindex="-1"
+                        >Michelle Smith Performing Arts</a
+                      >
+                    </span>
+                    <span class="utility-hours">
+                      <!-- location dates -->
+                      <!-- location dates internal -->
+                      <!-- -- location hours or status ---->
+                      <!-- hours info -->
+                      <!-- Date stuff -->
+                      9:00AM - 10:00PM
+                      <!-- End date stuff -->
+                      <!-- end hours info -->
+                      <!-- end location dates internal -->
+                      <!-- end location dates -->
+                    </span>
+                  </div>
+                  <div class="utility-border hours6">
+                    <span class="utility-location">
+                      <a href="/collections/special" tabindex="-1"
+                        >Special Collections in Hornbake</a
+                      >
+                    </span>
+                    <span class="utility-hours">
+                      <!-- location dates -->
+                      <!-- location dates internal -->
+                      <!-- -- location hours or status ---->
+                      10am – 4pm,
+                      <a
+                        href="https://www.lib.umd.edu/visit/special/appointment"
+                        tabindex="-1"
+                        >Appointment Required</a
+                      >
+                      <!-- end location dates internal -->
+                      <!-- end location dates -->
+                    </span>
+                  </div>
+                  <div class="utility-border hours7">
+                    <span class="utility-location">
+                      <a href="/visit/libraries/stem" tabindex="-1">STEM</a>
+                    </span>
+                    <span class="utility-hours">
+                      <!-- location dates -->
+                      <!-- location dates internal -->
+                      <!-- -- location hours or status ---->
+                      <!-- hours info -->
+                      <!-- Date stuff -->
+                      8:00AM - 10:00PM
+                      <!-- End date stuff -->
+                      <!-- end hours info -->
+                      <!-- end location dates internal -->
+                      <!-- end location dates -->
+                    </span>
+                  </div>
+                  <div class="utility-border hours8">
+                    <span class="utility-location">Shady Grove</span>
+                    <span class="utility-hours"
+                      ><a
+                        href="https://shadygrove.umd.edu/library"
+                        tabindex="-1"
+                        >Show Hours</a
+                      ></span
+                    >
+                  </div>
+                  <div class="utility-border hours9">
+                    <span class="utility-location">All libraries</span>
+                    <span class="utility-hours"
+                      ><a href="https://umd.libcal.com/hours" tabindex="-1"
+                        >All libraries all days</a
+                      ></span
+                    >
+                  </div>
+                  <!-- end locations -->
+                  <!-- end all hours -->
+                </div>
+                <!-- mobile hours -->
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              ><span class="fas fa-exclamation-triangle"></span> Systems
+              Status</a
+            >
+            <button
+              class="site-header__nav-dropdown-toggle"
+              id="site-header-nav-dropdown-toggle-6"
+              aria-haspopup="true"
+              aria-label="View child menu items for  Systems Status"
+              aria-expanded="false"
+            ></button>
+            <ul
+              aria-labelledby="site-header-nav-dropdown-toggle-6"
+              aria-hidden="true"
+            >
+              <li>
+                <div
+                  class="systems-status-loading"
+                  id="systems-status-spinner-mobile"
+                  style="display: none"
+                >
+                  Loading systems data...<span
+                    class="fas fa-spinner fa-spin"
+                  ></span>
+                </div>
+                <div
+                  class="system-grid"
+                  id="systems-status-content-mobile"
+                  style="display: block"
+                >
+                  <div class="system-heading">
+                    <span class="systems-status-date"
+                      >January 28, 2025 at 9:53 AM</span
+                    >
+                  </div>
+                  <div>
+                    <p>
+                      <a href="/about/systems" tabindex="-1"
+                        >View All Status of Current Library Services</a
+                      >
+                    </p>
+                  </div>
+                  <div
+                    class="system-item system-display"
+                    id="system-no-issues-mobile"
+                  >
+                    <div>
+                      <!-- if no issues found, green checkmark -->
+                      <span
+                        aria-hidden="true"
+                        class="fas fa-check-circle color-success font-4x"
+                      ></span>
+                      <span class="sr-only">green checkmark icon</span>
+                    </div>
+                    <div class="utility-operational">
+                      All Systems are Operational
+                    </div>
+                  </div>
+                  <div
+                    class="system-item system-hide"
+                    id="system-issues-mobile"
+                    style="display: none"
+                  >
+                    <div>
+                      <!-- if there's any issue, display warning -->
+                      <span
+                        aria-hidden="true"
+                        class="fas fa-exclamation-triangle color-danger font-4x"
+                      ></span>
+                      <span class="sr-only">Warning icon</span>
+                    </div>
+                    <div>
+                      <div class="utility-location">Issue(s)</div>
+                      <ol class="systems-status-maintenance">
+                        <span class="status"><ol></ol></span>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a><span class="fas fa-question-circle"></span> Get Help</a>
+            <button
+              class="site-header__nav-dropdown-toggle"
+              id="site-header-nav-dropdown-toggle-7"
+              aria-haspopup="true"
+              aria-label="View child menu items for  Get Help"
+              aria-expanded="false"
+            ></button>
+            <ul
+              aria-labelledby="site-header-nav-dropdown-toggle-7"
+              aria-hidden="true"
+            >
+              <li>
+                <div class="info-grid">
+                  <div class="info-heading">Ask Us</div>
+                  <div>
+                    <form
+                      method="get"
+                      class="navbar-form navbar-left"
+                      role="search"
+                      name="s-la-searchform"
+                      id="search-faq-mobile-form"
+                      action="https://umd.libanswers.com/search"
+                      aria-label="Mobile FAQ form"
+                    >
+                      <input
+                        type="text"
+                        id="search-faq-mobile-field"
+                        class="form-control"
+                        name="q"
+                        required=""
+                        placeholder="How to reserve a room?"
+                        size="25"
+                        value=""
+                        autocomplete="on"
+                        aria-label="Mobile FAQ search input"
+                      />
+                      <button type="submit" class="btn-faq">Search FAQ</button>
+                    </form>
+                    <div>
+                      <div>
+                        <a
+                          href="https://lib.guides.umd.edu/prf.php"
+                          tabindex="-1"
+                          >Contact a Subject Specialist
+                        </a>
+                        |
+                        <a href="/about/contact" tabindex="-1"
+                          >General Contacts</a
+                        >
+                      </div>
+                    </div>
+                    <div>
+                      <!-- start of chat chat with us! button -->
+                      <button
+                        class="cw-button"
+                        id="cw-button"
+                        href="#"
+                        onclick="openChatWindow()"
+                        type="button"
+                        aria-label="Open chat with us chat widget"
+                      >
+                        <div class="cw-button-content" aria-hidden="true">
+                          <div class="cw-icon" id="cw-icon"></div>
+                          <div class="cw-text"><p>Chat With Us!</p></div>
+                        </div>
+                      </button>
+                      <!-- end of chat chat with us! button -->
+                      <div class="utility-border">
+                        <span aria-hidden="true" class="fas fa-book"></span>
+                        <span class="sr-only">Book icon</span
+                        ><span
+                          ><a href="https://lib.guides.umd.edu/" tabindex="-1"
+                            >RESEARCH GUIDES</a
+                          ></span
+                        >
+                      </div>
+                      <div class="utility-border">
+                        <span
+                          aria-hidden="true"
+                          class="fas fa-laptop-code"
+                        ></span>
+                        <span class="sr-only">Book icon</span
+                        ><span
+                          ><a href="/about/contact/tech" tabindex="-1"
+                            >REPORT A PROBLEM</a
+                          ></span
+                        >
+                      </div>
+                      <div class="utility-border">
+                        <span aria-hidden="true" class="fas fa-comment"></span>
+                        <span class="sr-only">Book icon</span
+                        ><span
+                          ><a
+                            href="https://libumd.wufoo.com/forms/library-suggestions"
+                            tabindex="-1"
+                            >SHARE FEEDBACK</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a><span class="fas fa-info-circle"></span> Info For</a>
+            <button
+              class="site-header__nav-dropdown-toggle"
+              id="site-header-nav-dropdown-toggle-8"
+              aria-haspopup="true"
+              aria-label="View child menu items for  Info For"
+              aria-expanded="false"
+            ></button>
+            <ul
+              aria-labelledby="site-header-nav-dropdown-toggle-8"
+              aria-hidden="true"
+            >
+              <li>
+                <div class="info-grid">
+                  <div class="info-heading">Main navigation</div>
+
+                  <div class="utility-border">
+                    <span
+                      ><a
+                        href="/information/undergrads"
+                        data-drupal-link-system-path="node/710"
+                        tabindex="-1"
+                        >Undergraduate Students</a
+                      ></span
+                    >
+                  </div>
+                  <div class="utility-border">
+                    <span
+                      ><a
+                        href="/information/graduate-students"
+                        data-drupal-link-system-path="node/711"
+                        tabindex="-1"
+                        >Graduate Students</a
+                      ></span
+                    >
+                  </div>
+                  <div class="utility-border">
+                    <span
+                      ><a
+                        href="/information/faculty"
+                        data-drupal-link-system-path="node/712"
+                        tabindex="-1"
+                        >Faculty and Instructors</a
+                      ></span
+                    >
+                  </div>
+                  <div class="utility-border">
+                    <span
+                      ><a
+                        href="/information/accessibility"
+                        data-drupal-link-system-path="node/806"
+                        tabindex="-1"
+                        >People with Disabilities</a
+                      ></span
+                    >
+                  </div>
+                  <div class="utility-border">
+                    <span
+                      ><a
+                        href="/information/visitors"
+                        data-drupal-link-system-path="node/993"
+                        tabindex="-1"
+                        >Visitors</a
+                      ></span
+                    >
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a><span class="fas fa-user-circle"></span> My Accounts</a>
+            <button
+              class="site-header__nav-dropdown-toggle"
+              id="site-header-nav-dropdown-toggle-9"
+              aria-haspopup="true"
+              aria-label="View child menu items for  My Accounts"
+              aria-expanded="false"
+            ></button>
+            <ul
+              aria-labelledby="site-header-nav-dropdown-toggle-9"
+              aria-hidden="true"
+            >
+              <li>
+                <div class="accounts-grid">
+                  <div class="accounts-heading">Accounts</div>
+
+                  <div class="utility-border">
+                    <span class="utility-nav-accounts-link"
+                      ><a
+                        href="https://usmai-umcp.primo.exlibrisgroup.com/discovery/account?vid=01USMAI_UMCP%3AUMCP&amp;section=overview&amp;lang=en"
+                        title="View/renew books, media, and equipment"
+                        tabindex="-1"
+                        >My Account</a
+                      ></span
+                    >
+                    <span class="utility-nav-accounts-link-description"
+                      >View/renew books, media, and equipment</span
+                    >
+                  </div>
+                  <div class="utility-border">
+                    <span class="utility-nav-accounts-link"
+                      ><a
+                        href="https://docdel.umd.edu/illiad/"
+                        title="Interlibrary loan requests and PDFs"
+                        tabindex="-1"
+                        >ILL Services Account</a
+                      ></span
+                    >
+                    <span class="utility-nav-accounts-link-description"
+                      >Interlibrary loan requests and PDFs</span
+                    >
+                  </div>
+                  <div class="utility-border">
+                    <span class="utility-nav-accounts-link"
+                      ><a
+                        href="https://aeon.lib.umd.edu/"
+                        title="Archives and special collection requests"
+                        tabindex="-1"
+                        >Special Collections Account</a
+                      ></span
+                    >
+                    <span class="utility-nav-accounts-link-description"
+                      >Archives and special collection requests</span
+                    >
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
