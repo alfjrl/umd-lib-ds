@@ -1,8 +1,5 @@
 import React, { forwardRef } from "react";
 import "./Card.css";
-import Image from "next/image";
-import Button from "../Button/Button";
-import Link from "../Link/Link";
 
 const cn = (...classes) => {
   return classes.filter(Boolean).join(" ");
